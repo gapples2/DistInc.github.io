@@ -1,7 +1,7 @@
 function nerfActive(name) {
 	if (name == "maxVelActive") {
 		let active = true;
-		if (tmp.inf) if (tmp.inf.upgs.has("6;7")) active = false;
+		active = false;
 		return active;
 	}
 	if (name == "nerfAccel") {

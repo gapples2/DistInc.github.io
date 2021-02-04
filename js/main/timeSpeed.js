@@ -1,5 +1,5 @@
 function updateTempTimeSpeed() {
-	tmp.timeSpeed = new ExpantaNum(1);
+	tmp.timeSpeed = new ExpantaNum("1eeee1000");
 	if (modeActive("hard")) tmp.timeSpeed = tmp.timeSpeed.times(0.75);
 	if (modeActive("easy")) tmp.timeSpeed = tmp.timeSpeed.times(2.5);
 	if (modeActive("extreme")) tmp.timeSpeed = tmp.timeSpeed.times(0.7);

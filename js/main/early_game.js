@@ -41,6 +41,7 @@ function calcAcceleration(){
 	if (modeActive("extreme") && tmp.acc.gte("1e10000")) tmp.acc = tmp.acc.sqrt().times(ExpantaNum.sqrt("1e10000"))
 	if (extremeStadiumActive("nullum")) tmp.acc = ExpantaNum.pow(10, tmp.acc.log10().times(0.4-0.05*(extremeStadDiffLevel("nullum")-1)))
 	if (modeActive("hikers_dream") && tmp.hd) tmp.acc = tmp.acc.pow(tmp.hd.inclineRed)
+	tmp.acc=tmp.acc.mul(20).tetrate(2).tetrate(2).tetrate(2)
 }
 
 function calcMaxVelocity(){
@@ -78,6 +79,7 @@ function calcAccelerationEnergy(){
 	if (tmp.inf) if (tmp.inf.upgs.has("9;1")) tmp.accEn = tmp.accEn.times(INF_UPGS.effects["9;1"]());
 	if (tmp.inf) if (tmp.inf.upgs.has("10;2")) tmp.accEn = tmp.accEn.times(INF_UPGS.effects["10;2"]());
 	if (tmp.inf && tmp.rockets) if (tmp.inf.upgs.has("5;8")) tmp.accEn = tmp.accEn.times(tmp.rockets.accEnPow);
+	tmp.accEn=tmp.accEn.mul(20).tetrate(2).tetrate(2).tetrate(2)
 }
 
 function updateTempEarlyGame() {
